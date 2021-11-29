@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Media-gallery</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+</head>
+
+<body>
+  <!-- nav -->
+
+
+
+  <nav>
+    <ul>
+      <li class="logo">Media-Gallery</li>
+      <li class="items"><a href="#">Home</a></li>
+      <li class="items"><a href="#">About</a></li>
+      <li class="items"><a href="#">Contact</a></li>
+      <li class="items"><a href="#">Feedback</a></li>
+      <li class="btn"><a href="#"><i class="fas fa-bars"></i></a></li>
+    </ul>
+  </nav>
+
+  </section>
+  <!-- nav -->
+
+
+
+  <div class="container">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 6</div>
+      <img src="images/photo-5.jpeg" style="width:100%">
+    </div>
+
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 6</div>
+      <img src="images/jellyy.jpeg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 6</div>
+      <img src="images/photo-4.jpeg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 6</div>
+      <img src="images/starw.jpeg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">5 / 6</div>
+      <img src="images/pubg.jpeg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">6 / 6</div>
+      <img src="images/real.jpeg" style="width:100%">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+    <div class="row">
+      <div class="column">
+        <img class="demo cursor" src="images/photo-5.jpeg" style="width:100% " onclick="currentSlide(1)" alt="Universe">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/jellyy.jpeg" style="width:100%" onclick="currentSlide(2)" alt="Jellyfish">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/photo-4.jpeg" style="width:100%" onclick="currentSlide(3)" alt="Planets">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/starw.jpeg" style="width:100%" onclick="currentSlide(4)" alt="Star-Wars">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/pubg.jpeg" style="width:100%" onclick="currentSlide(5)" alt="PUBG">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/real.jpeg" style="width:100%" onclick="currentSlide(6)" alt="Real Madrid">
+      </div>
+    </div>
+  </div>
+
+
+  <br>
+
+
+  <main class="main-grid">
+    <div class="main-grid-item one">
+      <div class="cli"></div>
+      <hr />
+      <div class="card-content">
+        <h4 class="card-title">MacBook Pro</h4>
+        <p class="card-text">The most powerful MacBook Pro ever is here.
+          With the blazing-fast M1 Pro or M1 Max chip — the first Apple silicon designed for pros — you get groundbreaking performance and amazing battery life.</p>
+        <button data-modal="#09" class="card-more button">View</button>
+      </div>
+    </div>
+    <div id="09" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-body">
+          <img src="https://www.apple.com/v/macbook-pro-14-and-16/b/images/meta/macbook-pro-14-and-16_overview__fz0lron5xyuu_og.png" alt="macbook" />
+          <div class="eg-text">
+            <h3>MacBook Pro</h3>
+            <p>The most powerful MacBook Pro ever is here.
+              With the blazing-fast M1 Pro or M1 Max chip — the first Apple silicon designed for pros — you get groundbreaking performance and amazing battery life.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-grid-item two">
+      <div class="cli"></div>
+      <hr />
+      <div class="card-content">
+        <h4 class="card-title">Neuromorphic Cameras</h4>
+        <p class="card-text">Neuromorphic Cameras Provide a Vision of the Future.
+          From enhanced battlefield protection systems to maintaining aerial drone delivery fleets, neuromorphic cameras hold promise for the future.</p>
+        <button data-modal="#24" class="card-more button">View</button>
+      </div>
+    </div>
+    <div id="24" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-body">
+          <img src="https://www.northropgrumman.com/wp-content/uploads/Neuromorphic-Camera.jpg?w=640" alt="chip" />
+          <div class="eg-text">
+            <h3>Neuromorphic Cameras</h3>
+            <p> Neuromorphic cameras only report changes
+              in flux. If the rate of photons falling on a pixel doesn’t change, they report nothing.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-grid-item three">
+      <div class="cli"></div>
+      <hr />
+      <div class="card-content">
+        <h4 class="card-title">Apple</h4>
+        <p class="card-text">Apple nearing deal to use its own 5G modems in 2023 iPhones,
+          report says. Apple may be drawing close to having its own 5G modems ready for its 2023 iPhones, Nikkei reported Wednesday, as the tech giant works out a deal with Taiwan Semiconductor Manufacturing Company to use TSMC's chip production
+          technology. </p>
+        <button data-modal="#35" class="card-more button">View</button>
+      </div>
+    </div>
+    <div id="35" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-body">
+          <img src="https://www.apple.com/newsroom/images/product/iphone/standard/Apple_iPhone-13-Pro_New-Camera-System_09142021_Full-Bleed-Image.jpg.slideshow-xlarge_2x.jpg" alt="iphone" />
+          <div class="eg-text">
+            <h3>Apple</h3>
+            <p>Apple nearing deal to use its own 5G modems in 2023 iPhones, report says.
+              Apple may be drawing close to having its own 5G modems ready for its 2023 iPhones, Nikkei reported Wednesday, as the tech giant works out a deal with Taiwan Semiconductor Manufacturing Company to use TSMC's chip production technology.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-grid-item four">
+      <div class="cli"></div>
+      <hr />
+      <div class="card-content">
+        <h4 class="card-title">Mozila Firefox</h4>
+        <p class="card-text">Mozilla will end support for its Firefox Lockwise
+          password management app this year, the company said in a post on its site. The app, currently available on iOS and Android, will no longer be available to install or reinstall starting Dec. 13. That means iOS version 1.8.1 and Android
+          version 4.0.3 will be the app's last releases.</p>
+        <button data-modal="#44" class="card-more button">View</button>
+      </div>
+    </div>
+    <div id="44" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-body">
+          <img src="https://www.mozilla.org/media/img/firefox/template/page-image-master.1b6efe3d5631.jpg" alt="mozila" />
+          <div class="eg-text">
+            <h3>Mozila Firefox</h3>
+            <p>Mozilla will end support for its Firefox Lockwise password management app this year, the company said in a post on its site. The app, currently available on iOS and Android, will no longer be available to install or reinstall starting
+              Dec. 13. That means
+              iOS version 1.8.1 and Android version 4.0.3 will be the app's last releases.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-grid-item five">
+      <div class="cli"></div>
+      <hr />
+      <div class="card-content">
+        <h4 class="card-title">Someone just bought virtual land for $2.5 million</h4>
+        <p class="card-text">A Canadian investment firm recently purchased a digital plot of land for nearly $2.5 million in cryptocurrency, it said Tuesday. The purchase, at a total of $2.43 million, is the biggest of its kind on record.</p>
+        <button data-modal="#54" class="card-more button">View</button>
+      </div>
+    </div>
+    <div id="54" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-body">
+          <img src="https://www.cnet.com/a/img/XTS9lbsBoPwc706JfdJ5nbarRQg=/1092x0/2021/10/28/38841241-864d-4f67-995a-2a26e242bb31/screen-shot-2021-10-28-at-1-07-20-pm-2.png" alt="example" />
+          <div class="eg-text">
+            <h3>Someone just bought virtual land for $2.5 million</h3>
+            <p>A Canadian investment firm recently purchased a digital plot of land for nearly $2.5 million in cryptocurrency, it said Tuesday. The purchase, at a total of $2.43 million, is the biggest of its kind on record.
+
+              Tokens.com, which focuses on decentralized finance (De-Fi), made the buy on Decentraland, a blockchain-based metaverse where cryptocurrency is spent to customize avatars, acquire real estate and interact with other members.
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-grid-item six">
+      <div class="cli"></div>
+      <hr />
+      <div class="card-content">
+        <h4 class="card-title">Twitter's 'disappearing' tweet fix expands to iOS</h4>
+        <p class="card-text">You'll no longer have to worry
+          about your Twitter timeline auto-refreshing and tweets
+          vanishing while you're reading them on desktop or iOS.A
+          Twitter update to fix an issue that causes tweets to
+          disappear from view as timelines auto-refresh rolled
+          out on desktop earlier this month and expanded to its
+          iOS app on Tuesday.</p>
+        <button data-modal="#59" class="card-more button">View</button>
+      </div>
+    </div>
+    <div id="59" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-body">
+          <img src="https://www.cnet.com/a/img/jAl3CUrzrqYs6hsx0csRthbL4Jg=/1200x675/left/middle/2021/03/25/b8e1d5bf-a6c1-4a81-85b8-50069587bdff/twitter-tweetdeck-tweeting-tweets-3397.jpg" alt="example" />
+          <div class="eg-text">
+            <h3>Twitter's 'disappearing' tweet fix expands to iOS</h3>
+            <p>You'll no longer have to worry
+              about your Twitter timeline auto-refreshing and tweets
+              vanishing while you're reading them on desktop or iOS.A
+              Twitter update to fix an issue that causes tweets to
+              disappear from view as timelines auto-refresh rolled
+              out on desktop earlier this month and expanded to its
+              iOS app on Tuesday.It's a welcome change for anyone who's ever had a tweet vanish before they could finish reading it.
+
+              This follows the company saying it was working on changes to fix the issue in September, acknowledging that it was a "frustrating experience." The update will come to the Android app in the future, it confirmed in a tweet.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-grid-item seven">
+      <div class="cli"></div>
+      <hr />
+      <div class="card-content">
+        <h4 class="card-title">Apple sues NSO Group over Pegasus spyware</h4>
+        <p class="card-text">The iPhone maker says it wants to hold the
+          Israel-based company accountable for
+          targeting Apple users.Calling the company "notorious
+          hackers" and "amoral 21st Century mercenaries,"
+          Apple on Tuesday filed a lawsuit against NSO
+          Group, the Israel-based firm behind the Pegasus
+          spyware that was uncovered on the phones of activists,
+          journalists and executives earlier this year. </p>
+        <button data-modal="#71" class="card-more button">View</button>
+      </div>
+    </div>
+    <!--end .main-grid-item -->
+    <div id="71" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-body">
+          <img src="https://i.gadgets360cdn.com/large/apple_logo_1556684737623.JPG" alt="example" />
+          <div class="eg-text">
+            <h3>Apple sues NSO Group over Pegasus spyware</h3>
+            <p>The iPhone maker says it wants to hold the
+              Israel-based company accountable for
+              targeting Apple users.Calling the company "notorious
+              hackers" and "amoral 21st Century mercenaries,"
+              Apple on Tuesday filed a lawsuit against NSO
+              Group, the Israel-based firm behind the Pegasus
+              spyware that was uncovered on the phones of activists,
+              journalists and executives earlier this year.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-grid-item eight">
+      <div class="cli"></div>
+      <hr />
+      <div class="card-content">
+        <h4 class="card-title">AT&T and Verizon agree to 5G power limits to resolve FAA safety concerns</h4>
+        <p class="card-text">In the hope of keeping 5G deployments on track, the companies volunteer to take the precautionary measures, even though they say there's no credible evidence of interference with airplane signals.</p>
+        <button data-modal="#32" class="card-more button">View</button>
+      </div>
+    </div>
+    <div id="32" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-body">
+          <img src="https://www.eweek.com/wp-content/uploads/2020/10/AT_T.5G-2.jpeg" alt="example" />
+          <div class="eg-text">
+            <h3>AT&T and Verizon agree to 5G power limits to resolve FAA safety concerns</h3>
+            <p>In the hope of keeping 5G deployments on track, the companies volunteer to take the precautionary measures, even though they say there's no credible evidence of interference with airplane signals.AT&T and Verizon Communications are
+              voluntarily agreeing to take further precautions to make sure cell towers transmitting 5G signals using newly acquired midband spectrum won't interfere with aircraft signals. The companies laid out their plan in a letter sent to the US
+              Federal Communications Commission on Wednesday afternoon, in a move meant to defuse a conflict between the wireless and aviation industries. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <p class="bottom">&copy; 2021 Java B</p>
+  </footer>
+
+
+</body>
+<script src="js/main.js"></script>
+
+
+</html>

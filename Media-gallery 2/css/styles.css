@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  font-size: 18px;
+  background-color: var(--prime);
+  margin: auto;
+  /* background-image: url('https://images.unsplash.com/photo-1517999144091-3d9dca6d1e43?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8&w=1000&q=80'); */
+  background-image: url('https://i.stack.imgur.com/Mv83H.png');
+}
+
+body {
+  width: 96%;
+}
+
+body {
+  width: 94%;
+}
+
+nav {
+  background: #151515;
+  padding: 5px 40px;
+  margin: 0;
+  background-image: url('https://i.stack.imgur.com/Mv83H.png');
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+nav ul li {
+  padding: 15px 0;
+  cursor: pointer;
+}
+
+nav ul li.items {
+  position: relative;
+  width: auto;
+  margin: 0 16px;
+  text-align: center;
+  order: 3;
+}
+
+nav ul li.items:after {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 5px;
+  height: 2px;
+  width: 100%;
+  background: #e91e63;
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+
+nav ul li.items:hover:after {
+  opacity: 1;
+  bottom: 8px;
+}
+
+nav ul li.logo {
+  flex: 1;
+  color: white;
+  font-size: 23px;
+  font-weight: 600;
+  cursor: default;
+  user-select: none;
+}
+
+nav ul li.logo:hover {
+  color: #e91e63;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  transition: .4s;
+}
+
+nav ul li:hover a {
+  color: #e91e63;
+}
+
+nav ul li i {
+  font-size: 23px;
+}
+
+nav ul li.btn {
+  display: none;
+}
+
+nav ul li.btn.hide i:before {
+  content: '\f00d';
+}
+
+@media all and (max-width: 900px) {
+  nav {
+    padding: 5px 30px;
+  }
+
+  nav ul li.items {
+    width: 100%;
+    display: none;
+  }
+
+  nav ul li.items.show {
+    display: block;
+  }
+
+  nav ul li.btn {
+    display: block;
+  }
+
+  nav ul li.items:hover {
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px #33ffff,
+      inset 0 0 10px #66ffff;
+  }
+
+  nav ul li.items:hover:after {
+    opacity: 0;
+  }
+}
+
+.container {
+  position: relative;
+  border: 5px solid #222;
+}
+
+.mySlides {
+  display: none;
+  border: 5px solid #555;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+  background-image: url('https://i.stack.imgur.com/Mv83H.png');
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.6666%;
+  border: 5px solid #555;
+  height: auto;
+  background-image: url('https://i.stack.imgur.com/Mv83H.png');
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+:root {
+  --prime: #222;
+  --text: #333;
+  --rev-text: #EEE;
+  --accent: #e91e63;
+  --bg: #EEE;
+}
+
+/* card */
+.main-grid {
+  margin-top: 3.5rem;
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+@media screen and (min-width: 550px) {
+  .main-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 990px) {
+  body {
+    width: 92%;
+  }
+
+  .main-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  body {
+    width: 90%;
+  }
+
+  .main-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.main-grid-item {
+  border-radius: 4px;
+  padding: .5em;
+  background-color: var(--bg);
+  border: 5px solid #555;
+}
+
+.cli {
+  padding-bottom: 56%;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 4px 4px 0 0;
+  border: 5px solid #222;
+}
+
+.one .cli {
+  background-image: url('https://www.apple.com/v/macbook-pro-14-and-16/b/images/meta/macbook-pro-14-and-16_overview__fz0lron5xyuu_og.png');
+}
+
+.two .cli {
+  background-image: url('https://www.northropgrumman.com/wp-content/uploads/Neuromorphic-Camera.jpg?w=640');
+}
+
+.three .cli {
+  background-image: url('https://www.apple.com/newsroom/images/product/iphone/standard/Apple_iPhone-13-Pro_New-Camera-System_09142021_Full-Bleed-Image.jpg.slideshow-xlarge_2x.jpg');
+}
+
+.four .cli {
+  background-image: url('https://www.mozilla.org/media/img/firefox/template/page-image-master.1b6efe3d5631.jpg');
+}
+
+.five .cli {
+  background-image: url('https://www.cnet.com/a/img/XTS9lbsBoPwc706JfdJ5nbarRQg=/1092x0/2021/10/28/38841241-864d-4f67-995a-2a26e242bb31/screen-shot-2021-10-28-at-1-07-20-pm-2.png');
+}
+
+.six .cli {
+  background-image: url('https://www.cnet.com/a/img/jAl3CUrzrqYs6hsx0csRthbL4Jg=/1200x675/left/middle/2021/03/25/b8e1d5bf-a6c1-4a81-85b8-50069587bdff/twitter-tweetdeck-tweeting-tweets-3397.jpg');
+}
+
+.seven .cli {
+  background-image: url('https://i.gadgets360cdn.com/large/apple_logo_1556684737623.JPG');
+}
+
+.eight .cli {
+  background-image: url('https://www.eweek.com/wp-content/uploads/2020/10/AT_T.5G-2.jpeg');
+}
+
+.card-content {
+  padding: 0 .5em .7em .5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-title {
+  margin: 1rem 0 0 0;
+  text-transform: uppercase;
+  align-self: flex-start;
+  color: var(--text);
+}
+
+.card-text {
+  font-size: .80em;
+  line-height: 1.5;
+  align-self: flex-start;
+  color: var(--text);
+}
+
+button.card-more {
+  background: transparent;
+  padding: .45em .7em .4em .7em;
+  border-radius: 200px;
+  font-size: .7em;
+  text-decoration: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+button.card-more, button.card-more:visited {
+  color: var(--prime);
+  border: 1.5px solid var(--prime);
+  transition: all 250ms ease-in-out;
+}
+
+button.card-more:hover, button.card-more:active {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(10, 10, 10, .4);
+}
+
+.modal-content {
+  background-color: var(--bg);
+  color: var(--text);
+  margin: 1rem auto;
+  padding: 1em;
+  width: 80%;
+  border-radius: 4px;
+  animation: fadein .3s ease-in-out;
+  line-height: 2;
+  border: 5px solid #555;
+}
+
+@keyframes fadein {
+  from {
+    transform: scale(.1);
+  }
+}
+
+.close {
+  color: var(--text);
+  font-size: 2.5em;
+  font-weight: bold;
+  position: absolute;
+  top: 5px;
+  right: 12%;
+  transition: all .2s ease-in;
+  text-shadow: 2px 2px 5px #FAFAFA,
+    -2px -2px 5px #FAFAFA,
+    2px -2px 5px #FAFAFA,
+    -2px 2px 5px #FAFAFA;
+}
+
+.close:hover,
+.close:focus {
+  color: var(--accent);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2em;
+}
+
+.eg-text {
+  align-self: center;
+}
+
+.eg-text h3 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.modal-body img {
+  margin-bottom: 1.5em;
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (min-width: 1280px) {
+  .modal-body {
+    grid-template-columns: 7fr 5fr;
+  }
+}
+
+.bottom {
+  color: white;
+}
+
+footer {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+footer {
+  text-align: center;
+  padding: 1em 0 .3em 0;
+}
